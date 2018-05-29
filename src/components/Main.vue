@@ -1,7 +1,7 @@
 <template>
 <div class="main">
   <Portrait/>
-  <navbar/>
+  <!-- <navbar/> -->
   <presentation/>
   <Hobbies/>
   <Projects/>

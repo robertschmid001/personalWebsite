@@ -2,14 +2,14 @@
 <div class="nav-wrapper">
   <div class="navbar" id="nav-bar" v-scroll="handleScroll">
     <ul>
-        <li>PROJETS</li>
-        <li>SKILLS</li>
-        <li>LOISIRS</li>
-        <li>FOOTER</li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#carousel-id" v-smooth-scroll>Anchor</a> </li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#footer">FOOTER</a></li>
     </ul>
   </div>
 </div>
-
+ <!-- carousel-id -->
 </template>
 
 <script>
@@ -42,13 +42,16 @@ export default {
 
 <style  lang="scss" scoped>
 .nav-wrapper {
+  position: relative;
   height: 70px;
+  z-index:10;
 }
 .navbar {
   margin: 0;
   width: 100%;
   opacity: 0.9;
   height: 70px;
+  background:rgba(0, 0, 0, 0.3);
 }
 ul {
   justify-content: center;
@@ -58,25 +61,27 @@ ul {
   margin: 0;
 }
 li {
-  margin-top: 25px;
+  margin-top: 19px;
   padding-left: 20px;
   padding-right: 20px;
   list-style-type: none;
   color: white;
+  font-size: 25px;
+  font-style: oblique;
   font-weight: 800;
 }
 li:hover {
   opacity: 0.5;
 }
 @media screen and (max-width: 500px) {
-li {
-  margin-top: 25px;
-  padding-left: 8px;
-  padding-right: 8px;
-  list-style-type: none;
-  color: white;
-  font-weight: 800;
-  font-size: 15px;
-}
+  li {
+    margin-top: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+    list-style-type: none;
+    color: white;
+    font-weight: 800;
+    font-size: 15px;
+  }
 }
 </style>

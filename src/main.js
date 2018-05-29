@@ -4,7 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueCarousel from 'vue-carousel'
+import vueSmoothScroll from 'vue-smooth-scroll'
 
+Vue.use(vueSmoothScroll)
 Vue.config.productionTip = false
 Vue.use(VueCarousel)
 Vue.directive('scroll', {
