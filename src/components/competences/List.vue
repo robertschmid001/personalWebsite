@@ -1,0 +1,294 @@
+<template>
+<div class="component-wrapper-list" id="wrapper-list">
+  <div class="competences-wrapper">
+      <div class="items-wrapper">
+        <div v-for="(item, index) in skills" class="item-wrapper">
+          <img :src="item.imageUrl" :style="grayscale(item)" v-on:click="itemOnOff(item)" class="icon" :alt="item.title">
+        </div>
+      </div>
+    </div>
+</div>
+</template>
+<script>
+export default {
+
+  data () {
+    return {
+      skills: [{
+        title: 'Javascript',
+        imageUrl: require('./../../assets/icons/javascript.svg'),
+        content: 'description1',
+        clicked: false,
+        sound: require('./../../assets/sounds/1.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }, {
+        title: 'Html5',
+        imageUrl: require('./../../assets/icons/html5.svg'),
+        content: 'description2',
+        clicked: false,
+        sound: require('./../../assets/sounds/2.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }, {
+        title: 'Css3',
+        imageUrl: require('./../../assets/icons/css3.svg'),
+        content: 'description3',
+        clicked: false,
+        sound: require('./../../assets/sounds/3.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }, {
+        title: 'VueJS',
+        imageUrl: require('./../../assets/icons/vuejs.svg'),
+        content: 'description4',
+        clicked: false,
+        sound: require('./../../assets/sounds/4.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }, {
+        title: 'Angular',
+        imageUrl: require('./../../assets/icons/angular.svg'),
+        content: 'description6',
+        clicked: false,
+        sound: require('./../../assets/sounds/6.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }, {
+        title: 'Bootstrap',
+        imageUrl: require('./../../assets/icons/bootstrap.svg'),
+        content: 'description6',
+        clicked: false,
+        sound: require('./../../assets/sounds/9.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }, {
+        title: 'AdobeLightroom',
+        imageUrl: require('./../../assets/icons/adobelightroom.svg'),
+        content: 'description6',
+        clicked: false,
+        sound: require('./../../assets/sounds/10.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }, {
+        title: 'AdobePhotoshop',
+        imageUrl: require('./../../assets/icons/adobephotoshop.svg'),
+        content: 'description6',
+        clicked: false,
+        sound: require('./../../assets/sounds/G.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }, {
+        title: 'AdobeIllustrator',
+        imageUrl: require('./../../assets/icons/adobeillustrator.svg'),
+        content: 'description6',
+        clicked: false,
+        sound: require('./../../assets/sounds/chat.wav'),
+        haveSkill: require('./../../assets/icons/cog-green.svg')
+      }]
+    }
+  },
+  methods: {
+    grayscale (item) {
+      if (item.clicked === false) {
+        const grayscale = `${'filter'}:${'grayscale(100%)'}`
+        return grayscale
+      } else {
+        const grayscale = `${'filter'}:${'none'}`
+        return grayscale
+      }
+    },
+    itemOnOff (item) {
+      item.clicked = !item.clicked
+      this.playSound(item.sound)
+    },
+    playSound (sound) {
+      if (sound) {
+        var audio = new Audio(sound)
+        audio.play()
+      }
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+
+.component-wrapper-list {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .competences-wrapper {
+    margin: auto;
+    justify-content: center;
+    max-width: 1250px;
+    .items-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5%;
+      justify-content: center;
+      .item-wrapper {
+        width: 250px;
+        margin: 20px;
+        .icon {
+          width: 250px;
+          display:flex;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 980px) {
+  .component-wrapper-list {
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;  
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .competences-wrapper {
+      margin: auto;
+      justify-content: center;
+      max-width: 1250px;
+      .items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+        .item-wrapper {
+          max-width:210px;
+          .icon {
+            max-width: 210px;
+            display:flex;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 760px) {
+  .component-wrapper-list {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .competences-wrapper {
+      margin: auto;
+      justify-content: center;
+      max-width: 100%;
+      .items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+        .item-wrapper {
+          max-width:170px;
+          .icon {
+            max-width: 170px;
+            display:flex;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .component-wrapper-list {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .competences-wrapper {
+      margin: auto;
+      justify-content: center;
+      max-width: 100%;
+      .items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+        .item-wrapper {
+          max-width:117px;
+          .icon {
+            max-width: 117px;
+            display:flex;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 482px) {
+  .component-wrapper-list {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .competences-wrapper {
+      margin: auto;
+      justify-content: center;
+      max-width: 100%;
+      .items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+        .item-wrapper {
+          max-width:90px;
+          .icon {
+            max-width: 90px;
+            display:flex;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 410px) {
+  .component-wrapper-list {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .competences-wrapper {
+      margin: auto;
+      justify-content: center;
+      max-width: 100%;
+      .items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+        .item-wrapper {
+          max-width:60px;
+          .icon {
+            max-width: 60px;
+            display:flex;
+          }
+        }
+      }
+    }
+  }
+}
+</style>
+
+    //  intervalRandom () {
+    //   let interval = setInterval(this.randomizeSound, 2500)
+    //   this.randomSound = !this.randomSound
+    //   console.log(this.randomSound)
+    //   if (this.randomSound === false) {
+    //     console.log('in false')
+    //     return clearInterval(this.interval)
+    //   }
+    //   if (this.randomSound === true) {
+    //     console.log('in false')
+    //     return interval
+    //   }
+    // },
+    // randomizeSound () {
+    //   console.log('in randomizeSound')
+    //   const sounds = [require('./../../assets/sounds/1.wav'),
+    //                   require('./../../assets/sounds/2.wav'), require('./../../assets/sounds/3.wav'),
+    //                   require('./../../assets/sounds/4.wav'), require('./../../assets/sounds/5.wav'),
+    //                   require('./../../assets/sounds/6.wav'), require('./../../assets/sounds/7.wav'),
+    //                   require('./../../assets/sounds/8.wav'), require('./../../assets/sounds/9.wav'),
+    //                   require('./../../assets/sounds/10.wav')
+    //   ]
+    //   if (this.randomSound === false) {
+    //   return clearInterval(this.interval)
+    //   } else {
+    //     this.playSound(sounds[Math.floor(Math.random() * Math.floor(9))])
+    //   }
+    // }
