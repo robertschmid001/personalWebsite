@@ -11,7 +11,7 @@
 						<h2>Game: War-Ships</h2>
 						<span class="project-text">
 							<h3>Objective: Create an Online multiplayer gave using Firebase</h3><br>
-							&nbsp; This was our second project, this one really put our knowledge of Javascript to the test! It was an algorythm bonanza!
+							&nbsp; This was our second project, this one really put our knowledge of Javascript to the test! It was an algorithm bonanza!
 							This one taught us how to use Angular, how to pass through Data from one component to the next using various Services.
 							After finishing the project, we had a couple of days spare where we had a little fun and added sound effects.
 							<a href="https://github.com/robertschmid001/Wild-Battleship">Check it out on Github!</a>

@@ -19,64 +19,55 @@ export default {
         imageUrl: require('./../../assets/icons/javascript.svg'),
         content: 'description1',
         clicked: false,
-        sound: require('./../../assets/sounds/1.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/1.wav')
       }, {
         title: 'Html5',
         imageUrl: require('./../../assets/icons/html5.svg'),
         content: 'description2',
         clicked: false,
-        sound: require('./../../assets/sounds/2.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/2.wav')
       }, {
         title: 'Css3',
         imageUrl: require('./../../assets/icons/css3.svg'),
         content: 'description3',
         clicked: false,
-        sound: require('./../../assets/sounds/3.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/3.wav')
       }, {
         title: 'VueJS',
         imageUrl: require('./../../assets/icons/vuejs.svg'),
         content: 'description4',
         clicked: false,
-        sound: require('./../../assets/sounds/4.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/4.wav')
       }, {
         title: 'Angular',
         imageUrl: require('./../../assets/icons/angular.svg'),
         content: 'description6',
         clicked: false,
-        sound: require('./../../assets/sounds/6.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/6.wav')
       }, {
         title: 'Bootstrap',
         imageUrl: require('./../../assets/icons/bootstrap.svg'),
         content: 'description6',
         clicked: false,
-        sound: require('./../../assets/sounds/9.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/9.wav')
       }, {
         title: 'AdobeLightroom',
         imageUrl: require('./../../assets/icons/adobelightroom.svg'),
         content: 'description6',
         clicked: false,
-        sound: require('./../../assets/sounds/10.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/10.wav')
       }, {
         title: 'AdobePhotoshop',
         imageUrl: require('./../../assets/icons/adobephotoshop.svg'),
         content: 'description6',
         clicked: false,
-        sound: require('./../../assets/sounds/G.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/G.wav')
       }, {
         title: 'AdobeIllustrator',
         imageUrl: require('./../../assets/icons/adobeillustrator.svg'),
         content: 'description6',
         clicked: false,
-        sound: require('./../../assets/sounds/chat.wav'),
-        haveSkill: require('./../../assets/icons/cog-green.svg')
+        sound: require('./../../assets/sounds/chat.wav')
       }]
     }
   },
