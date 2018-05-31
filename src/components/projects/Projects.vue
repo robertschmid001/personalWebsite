@@ -213,7 +213,7 @@ $size: 170px; // (Fully responsive)
 			width: 20%;
 			z-index: 2;
 			& .cat-wrapper {
-				height: 95%;
+				height: 92%;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -280,10 +280,10 @@ $size: 170px; // (Fully responsive)
 			}
 			.bloc-color2 {
 				position: relative;
-				left: 39px;
-				top: -94px;
-				width: 73%;
-				height: 10%;
+				left: 31px;
+				top: -109px;
+				width: 78%;
+				height: 11%;
 				background: $color-black;
 				overflow: hidden;
 				transform: rotate(45deg);
@@ -294,7 +294,7 @@ $size: 170px; // (Fully responsive)
 			z-index: 4;
 			overflow: hidden;
 			.color-bloc {
-				height: 139px;
+				height: 125px;
 				background-color: none;
 			}
 			.pokedex-wrapper {
