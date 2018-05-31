@@ -212,6 +212,7 @@ $size: 170px; // (Fully responsive)
 		& .content2 {
 			width: 20%;
 			z-index: 2;
+			overflow: hidden;
 			& .cat-wrapper {
 				height: 92%;
 				display: flex;
