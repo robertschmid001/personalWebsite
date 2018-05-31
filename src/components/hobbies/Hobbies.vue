@@ -35,7 +35,6 @@ export default {
   methods: {
     handleScroll: function (evt) {
       var div = document.getElementById('carousel-id')
-      console.log(window.scrollY)
       if (window.scrollY > 1380 && this.isVisible === false && window.innerWidth > 499) {
 				this.isVisible = true
         div.style.visibility = 'visible'

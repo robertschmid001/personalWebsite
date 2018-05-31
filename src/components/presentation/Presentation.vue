@@ -58,7 +58,6 @@ isVisible: false,
     handleScroll: function (evt) {
       var div = document.getElementById('second-content')
       var div2 = document.getElementById('third-content')
-      console.log(window.scrollY)
       if (window.scrollY > 600 && this.animateContent == false && window.innerWidth > 499)  {
         this.animateContent = true
         div.style.visibility = 'visible'

@@ -115,7 +115,6 @@ export default {
       var div2 = document.getElementById('pokedex')
 			var div3= document.getElementById('aquatique')
 			var div4= document.getElementById('coworking')
-      console.log(window.scrollY)
       if (window.scrollY > 2025 && this.animationNumber === 1 && window.innerWidth > 499) {
 				this.animationNumber += 1
         div2.style.visibility = 'visible'
