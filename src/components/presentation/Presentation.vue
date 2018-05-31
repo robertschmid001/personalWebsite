@@ -59,13 +59,13 @@ isVisible: false,
       var div = document.getElementById('second-content')
       var div2 = document.getElementById('third-content')
       console.log(window.scrollY)
-      if (window.scrollY > 900 && this.animateContent == false && window.innerWidth > 499)  {
+      if (window.scrollY > 600 && this.animateContent == false && window.innerWidth > 499)  {
         this.animateContent = true
         div.style.visibility = 'visible'
         div.animate([{transform: 'translateY(-100%)', opacity: 0}, {transform: 'translateY(0)', opacity: 1}],
         { duration: 600, iterations: 1})
       }
-      if (window.scrollY > 1350 && this.animateContent==true && window.innerWidth > 499) {
+      if (window.scrollY > 900 && this.animateContent==true && window.innerWidth > 499) {
         div2.style.visibility = 'visible'
         div2.animate([{ transform: 'translateX(-100%)', opacity: 0 },
         {transform: 'translateX(0)', opacity: 1}], {duration: 800, iterations: 1})
@@ -88,12 +88,12 @@ isVisible: false,
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .main  {
-  height: 100vh;
+  height: 1085px;
   justify-content: center;
   display: flex;
   .wrapper1 {
     width: 1250px;
-    height: 100vh;
+    height: 1085px;
     flex-direction: row;
     display: flex;
     .first {
@@ -127,7 +127,7 @@ isVisible: false,
       margin-top: 40px;
       width: 35%;
       background-color: white;
-      height: 90vh;
+      height: 90%;
       visibility: hidden;
       & .content-wrapper1 {
         height: 40%;
@@ -199,7 +199,7 @@ h2 {
 }
 @media (max-width: 1100px) {
   .main  {
-    height: 100vh;
+    height: 1085px;
     justify-content: center;
     flex-direction: column;
     display: flex;

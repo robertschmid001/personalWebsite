@@ -116,19 +116,19 @@ export default {
 			var div3= document.getElementById('aquatique')
 			var div4= document.getElementById('coworking')
       console.log(window.scrollY)
-      if (window.scrollY > 2300 && this.animationNumber === 1 && window.innerWidth > 499) {
+      if (window.scrollY > 2025 && this.animationNumber === 1 && window.innerWidth > 499) {
 				this.animationNumber += 1
         div2.style.visibility = 'visible'
         div2.animate([{transform: 'translateX(200%)', opacity: 0}, {transform: 'translateY(0)', opacity: 1}],
         { duration: 800, iterations: 1})
       }
-      if (window.scrollY > 2600 && this.animationNumber === 2 && window.innerWidth > 499) {
+      if (window.scrollY > 2200 && this.animationNumber === 2 && window.innerWidth > 499) {
 				this.animationNumber += 1
         div.style.visibility = 'visible'
         div.animate([{ transform: 'translateX(-100%)', opacity: 0 },
         {transform: 'translateX(0)', opacity: 1}], {duration: 600, iterations: 1})
       }
-			if (window.scrollY > 2950 && this.animationNumber === 3 && window.innerWidth > 499) {
+			if (window.scrollY > 2850 && this.animationNumber === 3 && window.innerWidth > 499) {
 				this.animationNumber += 1
         div3.style.visibility = 'visible'
         div3.animate([{transform: 'translateY(200%)', opacity: 0}, {transform: 'translateY(0)', opacity: 1}],

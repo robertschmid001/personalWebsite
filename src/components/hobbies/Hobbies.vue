@@ -36,7 +36,7 @@ export default {
     handleScroll: function (evt) {
       var div = document.getElementById('carousel-id')
       console.log(window.scrollY)
-      if (window.scrollY > 1550 && this.isVisible === false && window.innerWidth > 499) {
+      if (window.scrollY > 1380 && this.isVisible === false && window.innerWidth > 499) {
 				this.isVisible = true
         div.style.visibility = 'visible'
         div.animate([{transform: 'translateX(-100%)', opacity: 0}, {transform: 'translateX(0)', opacity: 1}],
