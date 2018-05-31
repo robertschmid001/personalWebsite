@@ -14,7 +14,7 @@
 							&nbsp; This was our second project, this one really put our knowledge of Javascript to the test! It was an algorithm bonanza!
 							This one taught us how to use Angular, how to pass through Data from one component to the next using various Services.
 							After finishing the project, we had a couple of days spare where we had a little fun and added sound effects.
-							<a href="https://github.com/robertschmid001/Wild-Battleship">Check it out on Github!</a>
+							<a href="https://github.com/robertschmid001/Wild-Battleship" target="_blank">Check it out on Github!</a>
 						</span>
 					</div>
 				</div>
@@ -26,7 +26,7 @@
 							<h3>Objective: Create a simple one page website without using a frame-work.</h3><br>
 							&nbsp; This was our very first school project, for a real client. We had to create a small one-page for a Co-working open space.
 							As you can see, we went for a very simple, clear, flat design. For this we only used CSS/HTML and the google/API for the map.
-							<a href="https://github.com/robertschmid001/CoworkingLaLoupe">Check it out on Github!</a>
+							<a href="https://github.com/robertschmid001/CoworkingLaLoupe" target="_blank">Check it out on Github!</a>
 						</span>
 					</div>
 					<div class="carousel-wrapper">
@@ -68,7 +68,7 @@
 							<h3>Objective: Use a Pokémon API using Angular2, then do whatever you want with the data.</h3><br>
 							&nbsp; In our group, we were all Dad's and we wondered what our children would want.. So what could have better than a Pokédex? <br>
 							I wanted to design an interface that would evolve as we implement new functionalities. Our goal was to be able to input a Pokémon's name and have his picture and characteristics pop-up on the screen have the Dr read it out.
-							<a href="https://github.com/robertschmid001/Pokedex">Check it out on Github!</a><br>
+							<a href="https://github.com/robertschmid001/Pokedex" target="_blank">Check it out on Github!</a><br>
 						</span>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 					As we were creating a website for the local swimming pool, we had to create a system for the admin to dynamically change the opening and closing times at will.
 					We also had to use a weather API and incorporate it into the front page in such a fashion that it's easily accessible without it being intrusive.
 					They can also generate articles (saved by using mongoDB) that appear as short articles on the front page that leads into their own /news page.
-						<a href="https://parcaquatiqueduperche.fr">Check the website out!</a>
+						<a href="https://parcaquatiqueduperche.fr" target="_blank">Check the website out!</a>
 					</span>
       	</div>
 				<div class="carousel-wrapper">

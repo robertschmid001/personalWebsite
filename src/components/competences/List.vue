@@ -113,6 +113,7 @@ export default {
       .item-wrapper {
         width: 250px;
         margin: 20px;
+        cursor: pointer;
         .icon {
           width: 250px;
           display:flex;
@@ -125,7 +126,7 @@ export default {
   .component-wrapper-list {
     flex-direction: column;
     padding-top: 50px;
-    padding-bottom: 50px;  
+    padding-bottom: 50px;
     display: flex;
     width: 100%;
     justify-content: center;

@@ -2,9 +2,9 @@
   <div class="component-wrapper">
     <div class="footer">
       <div class="icons-wrapper">
-        <a href="https://www.linkedin.com/in/robert-schmid-7a0a4414a/"><img class="footer-icons" src="./../../../assets/icons/linkedin.svg" alt="" title="Link to my linkedIn profile!"></a>
-        <a href="https://github.com/robertschmid001"><img class="footer-icons" src="./../../../assets/icons/github.svg" alt="" title="Link ot my Github!"></a>
-        <a href="http://www.doyoubuzz.com/robert-schmid"><img class="footer-icons" src="./../../../assets/icons/cv.png" alt="" title="Link to my online-CV!"></a>
+        <a href="https://www.linkedin.com/in/robert-schmid-7a0a4414a/" target="_blank"><img class="footer-icons" src="./../../../assets/icons/linkedin.svg" alt="" title="Link to my linkedIn profile!"></a>
+        <a href="https://github.com/robertschmid001" target="_blank"><img class="footer-icons" src="./../../../assets/icons/github.svg" alt="" title="Link ot my Github!"></a>
+        <a href="http://www.doyoubuzz.com/robert-schmid" target="_blank"><img class="footer-icons" src="./../../../assets/icons/cv.png" alt="" title="Link to my online-CV!"></a>
       </div>
       <div class="form">
     <component :is="'Mail'"></component>
