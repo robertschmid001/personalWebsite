@@ -3,7 +3,7 @@
   <div class="wrapper1">
     <div class="first">
       <div class="title-presentation-wrapper">
-        <img class="title-image" src="./../../assets/images/viking2.png" alt="">
+        <img class="title-image" src="./../../assets/images/viking3.png" alt="">
         <h1><span class="space">WHO</span><br>AM I?</h1>
       </div>
     </div>
@@ -30,7 +30,7 @@
 
     <div class="third" id="third-content">
       <div class="content3-wrapper1 h3-title-background4">
-        <h1 class="h3-content3">WHAT ABOUT <br><span class="space3">MY HOBBIES?</span></h1>
+        <h2 class="h3-content3">WHAT ABOUT <br><span class="space3">MY HOBBIES?</span></h2>
       </div>
     </div>
 
@@ -99,14 +99,14 @@ isVisible: false,
     .first {
       margin-top: 130px;
       width: 30%;
-      height: 594.42px;
-      & .title-presentation-wrapper {
+      height: 563.42px;
+      .title-presentation-wrapper {
         height: 100%;
         position: relative;
         text-align: center;
         color: white;
       }
-      & .title-presentation-wrapper h1 {
+      .title-presentation-wrapper h1 {
         position: absolute;
         top: 20%;
         left: 50%;
@@ -115,11 +115,11 @@ isVisible: false,
         font-style: oblique;
         line-height: 40px;
       }
-      & .title-image{
+      .title-image{
         width: 100%;
         height: 100%;
       }
-      & .space {
+      .space {
         padding-left: 82px;
       }
     }
@@ -152,7 +152,7 @@ isVisible: false,
       width: 40%;
       background-color: rgb(212, 240, 252);
       z-index: 1;
-      height: 296px;
+      height: 276px;
       margin-top: 789px;
       visibility: hidden;
       & .content3-wrapper1 {
@@ -179,7 +179,7 @@ isVisible: false,
 }
 .text-wrapper {
   padding: 30px;
-  font-size: 25px;
+  font-size: 20px;
 }
 p {
   margin: 0;
@@ -222,8 +222,7 @@ h2 {
           line-height: 40px;
         }
         & .title-image{
-          width: 100%;
-          height: 100%;
+          display: none;
         }
         & .space {
           padding-left: 82px;

@@ -9,8 +9,18 @@
   height: 100vh;
   color: white;
   margin: 0;
-  background-image: url('./../../assets/images/frontpage2.png');
+  background-image: url('./../../assets/images/topcrop.png');
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media (max-width: 1255px) {
+.portrait {
+  background-image: url('./../../assets/images/bigcropleft.png');
+  }
+}
+@media (max-width: 750px) {
+  .portrait {
+    background-image: url('./../../assets/images/leftsmallcrop.png');
+  }
 }
 </style>

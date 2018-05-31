@@ -280,10 +280,10 @@ $size: 170px; // (Fully responsive)
 			}
 			.bloc-color2 {
 				position: relative;
-				left: 38px;
-				top: -96px;
-				width: 72%;
-				height: 11%;
+				left: 39px;
+				top: -94px;
+				width: 73%;
+				height: 10%;
 				background: $color-black;
 				overflow: hidden;
 				transform: rotate(45deg);
@@ -317,6 +317,7 @@ $size: 170px; // (Fully responsive)
 }
 .text-wrapper {
 	padding: 20px;
+	font-size: 18px;
 }
 .title {
   font-size: 22px;
@@ -335,6 +336,13 @@ img {
 .description-wrapper {
   text-align: left;
 }
+a {
+color: #13c3f8;
+ text-decoration: none;
+}
+a:hover {
+	 font-weight: 900;
+ }
 @keyframes easyUp {
   0%   { bottom: 0; }
   50% { bottom: 12px; }
@@ -571,7 +579,7 @@ img {
 					h1 {
 						width: 100%;
 						padding-left: 20px;
-						font-size: 30px;
+						font-size: 40px;
 						margin-top: 12%;
 					}
 				}

@@ -1,28 +1,28 @@
 <template>
-<div class="component-wrapper-carousel" id="carousel-id" v-scroll='handleScroll'>
-  <div class="ia-container">
-		<figure>
-			<img src="./../../assets/images/photography.png" alt="image01" />
-			<input type="radio" name="radio-set" checked="checked" />
-			<figcaption><span>Photography</span></figcaption>
+	<div class="component-wrapper-carousel" id="carousel-id" v-scroll='handleScroll'>
+		<div class="ia-container">
 			<figure>
-				<img src="./../../assets/images/viking.png" alt="image02" />
-				<input type="radio" name="radio-set" />
-				<figcaption><span>Medieval weapons</span></figcaption>
+				<img src="./../../assets/images/photography.png" alt="photography"/>
+				<input type="radio" name="radio-set" checked="checked"/>
+				<figcaption><span><h3>Photography</h3>Photography is a great way to let your creativity run wild! Discover some of my photos on <a href="https://www.flickr.com/photos/96139453@N06/">Flickr</a> </span></figcaption>
 				<figure>
-					<img src="./../../assets/images/retro2.png" alt="image02" />
-					<input type="radio" name="radio-set" />
-					<figcaption><span>Retro-Gaming</span></figcaption>
+					<img src="./../../assets/images/viking.png" alt="viking-shield"/>
+					<input type="radio" name="radio-set"/>
+					<figcaption><span><h3>Medieval weapons</h3>I love History. So when I can, I learn how to make various weaponry, like viking shields for Historical Reenactors.</span></figcaption>
 					<figure>
-						<img src="./../../assets/images/voyage.png" alt="image02" />
-						<input type="radio" name="radio-set" />
-						<figcaption><span>Adventure!</span></figcaption>
+						<img src="./../../assets/images/retro2.png" alt="retro-gaming"/>
+						<input type="radio" name="radio-set"/>
+						<figcaption><span><h3>Retro-Gaming</h3>I'm a 90's Snes boy... since Street Fighter 2, I've been an avid gamer and collector</span></figcaption>
+						<figure>
+							<img src="./../../assets/images/voyage.png" alt="voyage"/>
+							<input type="radio" name="radio-set"/>
+							<figcaption><span><h3>Adventure!</h3>What's better than seeing the World!? China, Iceland and the Scottish Highlands? Experiencing other Cultures!</span></figcaption>
+						</figure>
 					</figure>
 				</figure>
 			</figure>
-		</figure>
+		</div>
 	</div>
-</div>
 </template>
 <script>
 export default {
@@ -66,6 +66,13 @@ export default {
 		width: 1250px;
 		overflow: hidden;
 		box-shadow: 1px 1px 4px rgba(0,0,0,0.08);
+		a {
+			text-decoration: none;
+			color: #13c3f8;
+		}
+		a:hover {
+			font-weight: 1000;
+		}
 	}
 }
 
@@ -147,7 +154,7 @@ export default {
 	left: 20px;
 	overflow: hidden;
 	text-align: center;
-	background: rgba(87, 73, 81, 0.3);
+	background: rgba(7, 7, 7, 0.5);
 	line-height: 20px;
 	font-size: 18px;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -175,7 +182,7 @@ export default {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
     filter: alpha(opacity=99);
 	opacity: 1;
-	top: 50%;
+	top: 30%;
 }
 
 .ia-container #ia-selector-last:checked + figcaption span {
@@ -187,7 +194,7 @@ export default {
 }
 
 .ia-container input:hover + figcaption {
-	background: rgba(87, 73, 81, 0.03);
+	background: rgba(87, 73, 81, 0.5);
 }
 
 .ia-container input:checked ~ figure input{
@@ -258,7 +265,7 @@ export default {
 		height: 400px;
 		}
 		.ia-container figure {
-			left: 30%;
+			left: 25%;
 			width: 400px;
 		}
 		.ia-container input {
@@ -315,7 +322,7 @@ export default {
 			width: 30%;
 		}
 		.ia-container figcaption span {
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 	@media screen and (max-width: 465px) {
@@ -332,7 +339,7 @@ export default {
 			height: 450px;
 		}
 		.ia-container figcaption span {
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 
