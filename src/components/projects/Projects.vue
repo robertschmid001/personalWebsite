@@ -8,9 +8,9 @@
 				<div class="batnav-wrapper" id="batnav" v-scroll="handleScroll">
 					<img src="./../../assets/images/batNav.png" alt="">
 					<div class="text-wrapper">
-						<h2>Game: War-Ships</h2>
+						<h2>Game: Battleship</h2>
 						<span class="project-text">
-							<h3>Objective: Create an Online multiplayer gave using Firebase</h3><br>
+							<h3>Objective: Create an Online multiplayer game using Firebase</h3><br>
 							&nbsp; This was our second project, this one really put our knowledge of Javascript to the test! It was an algorithm bonanza!
 							This one taught us how to use Angular, how to pass through Data from one component to the next using various Services.
 							After finishing the project, we had a couple of days spare where we had a little fun and added sound effects.
@@ -78,8 +78,8 @@
 					<h2>Website: Parc Aquatique</h2>
 					<span class="project-text">
 					<h3>Objective: Create a website with CMS using Angular 4</h3><br>
-					&nbsp; In this project we used the Method SCRUM, which gave us alot of agility and great client feedback during the production of the various functionalities.
-					As we were creating a website for the local swimming pool, we had to create a system for the admin to dynamically change the opening and closing times at will.
+					&nbsp; In this project we used the Method SCRUM, which gave us a lot of agility and great client feedback during the production of the various functionalities.
+					As we were creating a website for the local swimming pool, we had to create a system for the admin to dynamically change the opening and closing times.
 					We also had to use a weather API and incorporate it into the front page in such a fashion that it's easily accessible without it being intrusive.
 					They can also generate articles (saved by using mongoDB) that appear as short articles on the front page that leads into their own /news page.
 						<a href="https://parcaquatiqueduperche.fr" target="_blank">Check the website out!</a>
