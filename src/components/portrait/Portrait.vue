@@ -12,6 +12,7 @@
   background-image: url('./../../assets/images/topcrop.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: white;
 }
 @media (max-width: 1255px) {
 .portrait {

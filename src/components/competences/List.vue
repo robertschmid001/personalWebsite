@@ -125,8 +125,8 @@ export default {
 @media (max-width: 980px) {
   .component-wrapper-list {
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -140,9 +140,9 @@ export default {
         padding: 0;
         justify-content: center;
         .item-wrapper {
-          max-width:210px;
+          max-width:180px;
           .icon {
-            max-width: 210px;
+            max-width: 180px;
             display:flex;
           }
         }
@@ -155,6 +155,8 @@ export default {
     flex-direction: column;
     display: flex;
     width: 100%;
+    padding-top: 150px;
+    padding-bottom: 150px;
     justify-content: center;
     .competences-wrapper {
       margin: auto;
@@ -182,6 +184,8 @@ export default {
     display: flex;
     width: 100%;
     justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
     .competences-wrapper {
       margin: auto;
       justify-content: center;
@@ -208,6 +212,8 @@ export default {
     display: flex;
     width: 100%;
     justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
     .competences-wrapper {
       margin: auto;
       justify-content: center;
@@ -219,6 +225,7 @@ export default {
         justify-content: center;
         .item-wrapper {
           max-width:90px;
+          margin: 10px;
           .icon {
             max-width: 90px;
             display:flex;
@@ -234,6 +241,8 @@ export default {
     display: flex;
     width: 100%;
     justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
     .competences-wrapper {
       margin: auto;
       justify-content: center;
@@ -244,9 +253,10 @@ export default {
         padding: 0;
         justify-content: center;
         .item-wrapper {
-          max-width:60px;
+          max-width:80px;
+          margin: 10px;
           .icon {
-            max-width: 60px;
+            max-width: 80px;
             display:flex;
           }
         }

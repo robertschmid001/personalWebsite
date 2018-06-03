@@ -3,14 +3,14 @@
     <div class="projects-wrapper">
 			<div class="content1">
       	<div class="image-wrapper">
-					<h1>AND MY PROJECTS?</h1>
+					<h2>AND MY <span class="h2-space" >PROJECTS?</span></h2>
 				</div>
 				<div class="batnav-wrapper" id="batnav" v-scroll="handleScroll">
 					<img src="./../../assets/images/batNav.png" alt="">
 					<div class="text-wrapper">
-						<h2>Game: Battleship</h2>
+						<h3>Game: Battleship</h3>
 						<span class="project-text">
-							<h3>Objective: Create an Online multiplayer game using Firebase</h3><br>
+							<h4>Objective: Create an Online multiplayer game using Firebase</h4><br>
 							&nbsp; This was our second project, this one really put our knowledge of Javascript to the test! It was an algorithm bonanza!
 							This one taught us how to use Angular, how to pass through Data from one component to the next using various Services.
 							After finishing the project, we had a couple of days spare where we had a little fun and added sound effects.
@@ -21,9 +21,9 @@
 				<div class="coworking-wrapper" id="coworking" v-scroll="handleScroll">
 					<img src="./../../assets/images/coworking1.png" alt="">
 					<div class="text-wrapper">
-						<h2>First Project/Website: Co-Working </h2>
+						<h3>First Project/Website: Co-Working </h3>
 						<span class="project-text">
-							<h3>Objective: Create a simple one page website without using a frame-work.</h3><br>
+							<h4>Objective: Create a simple one page website without using a frame-work.</h4><br>
 							&nbsp; This was our very first school project, for a real client. We had to create a small one-page for a Co-working open space.
 							As you can see, we went for a very simple, clear, flat design. For this we only used CSS/HTML and the google/API for the map.
 							<a href="https://github.com/robertschmid001/CoworkingLaLoupe" target="_blank">Check it out on Github!</a>
@@ -63,9 +63,9 @@
 				<div class="pokedex-wrapper" id="pokedex" v-scroll="handleScroll">
 					<img src="./../../assets/images/pokedex.png" alt="">
 					<div class="text-wrapper">
-						<h2>First Hackathon</h2>
+						<h3>First Hackathon</h3>
 						<span class="project-text">
-							<h3>Objective: Use a Pokémon API using Angular2, then do whatever you want with the data.</h3><br>
+							<h4>Objective: Use a Pokémon API using Angular2, then do whatever you want with the data.</h4><br>
 							&nbsp; In our group, we were all Dad's and we wondered what our children would want.. So what could have better than a Pokédex? <br>
 							I wanted to design an interface that would evolve as we implement new functionalities. Our goal was to be able to input a Pokémon's name and have his picture and characteristics pop-up on the screen have the Dr read it out.
 							<a href="https://github.com/robertschmid001/Pokedex" target="_blank">Check it out on Github!</a><br>
@@ -75,9 +75,9 @@
 			<div class="aquatique-wrapper" id="aquatique"  v-scroll="handleScroll">
 				<img src="./../../assets/images/parcAquatique.png" alt="">
  				<div class="text-wrapper">
-					<h2>Website: Parc Aquatique</h2>
+					<h3>Website: Parc Aquatique</h3>
 					<span class="project-text">
-					<h3>Objective: Create a website with CMS using Angular 4</h3><br>
+					<h4>Objective: Create a website with CMS using Angular 4</h4><br>
 					&nbsp; In this project we used the Method SCRUM, which gave us a lot of agility and great client feedback during the production of the various functionalities.
 					As we were creating a website for the local swimming pool, we had to create a system for the admin to dynamically change the opening and closing times.
 					We also had to use a weather API and incorporate it into the front page in such a fashion that it's easily accessible without it being intrusive.
@@ -182,7 +182,7 @@ $size: 170px; // (Fully responsive)
 				height: 222px;
 				background: $color-black;
 				justify-content: center;
-				h1 {
+				h2 {
 					color: white;
 					margin: 0;
 					margin-top: 17%;
@@ -472,7 +472,7 @@ a:hover {
 					height: 150px;
 					background: $color-black;
 					text-align: left;
-					h1 {
+					h2 {
 						width: 100%;
 						color: white;
 						padding-left: 20px;
@@ -576,14 +576,77 @@ a:hover {
 			& .content1 {
 				& .image-wrapper {
 					text-align: left;
-					h1 {
+					height: 600px;
+					h2 {
+						margin-top: 0;
+						height: 40px;
+						position: relative;
 						width: 100%;
 						padding-left: 20px;
 						font-size: 40px;
-						margin-top: 12%;
+						top: 73%;
+						.h2-space {
+							padding-left: 40px;
+						}
+					}
+				}
+				.coworking-wrapper {
+					margin-top: 300px;
+					background-color: white;
+					visibility: hidden;
+				}
+			}
+			& .content2 {
+				& .cat-wrapper {
+					height: 600px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: $color-black;
+					overflow: hidden;
+					& .cat {
+						position: relative;
+						height: 170px;
+						width: 170px * 1.13;
+					}
+				}
+				.bloc-color2 {
+					position: relative;
+					width: 100%;
+					background: $color-black;
+					overflow: hidden;
+					transform: rotate(45deg);
+				}
+			}
+			.content3 {
+				width: 100%;
+				z-index: 4;
+				overflow: hidden;
+				.color-bloc {
+					height: 0;
+					background-color: none;
+				}
+				.pokedex-wrapper {
+					background-color: white;
+					visibility: hidden;
+					& img {
+						width: 100%;
+					}
+				}
+				.aquatique-wrapper {
+					margin-top: 300px;
+					background-color: white;
+					visibility: hidden;
+					& img {
+						width: 100%;
 					}
 				}
 			}
+
+
+
+
+
 		}
 	}
 }

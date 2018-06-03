@@ -23,7 +23,7 @@
 
       <div class="content-wrapper3"><h2 class="h3-title-background3 padding-h3-title">AND NOW...?</h2>
         <div class="text-wrapper">
-          <p>&nbsp;&nbsp;I've currently finished my internship and I'm looking for job opportunities to grow as a Developer and have cool new projects to work on!</p>
+          <p>&nbsp;&nbsp;I've currently finished my internship and I'm now open for opportunities to grow as a Developper within a .</p>
         </div>
       </div>
     </div>
@@ -169,7 +169,7 @@ isVisible: false,
       background-color: #13c3f8;
       padding: 40px;
       color: white;
-    }
+      }
     }
   }
 }
@@ -300,7 +300,7 @@ h2 {
   padding: 20px;
 }
   .main  {
-    height: 1071px;
+    height: 1400px;
     justify-content: center;
     flex-direction: column;
     display: flex;
@@ -359,15 +359,16 @@ h2 {
       .third {
         background-color: rgb(212, 240, 252);
         visibility: hidden;
-        height: 15%;
+        height: 600px;
         margin: 0;
         width: 100%;
         z-index: 4;
         & .content3-wrapper1 {
           height: 100%;
           & .h3-content3 {
+            top: 74%;
             padding-left: 20px;
-            font-size: 30px;
+            font-size: 40px;
             font-style: oblique;
             line-height: 40px;
             margin: 0;
