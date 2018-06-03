@@ -300,7 +300,7 @@ h2 {
   padding: 20px;
 }
   .main  {
-    height: 1400px;
+    height: 1510px;
     justify-content: center;
     flex-direction: column;
     display: flex;

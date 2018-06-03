@@ -1,26 +1,56 @@
 <template>
-	<div class="component-wrapper-carousel" id="carousel-id" v-scroll='handleScroll'>
-		<div class="ia-container">
-			<figure>
-				<img src="./../../assets/images/photography.png" alt="photography"/>
-				<input type="radio" name="radio-set" checked="checked"/>
-				<figcaption><span><h3>Photography</h3>Photography is a great way to let your creativity run wild! Discover some of my photos on <a href="https://www.flickr.com/photos/96139453@N06/">Flickr</a> </span></figcaption>
+<div class="component-wrapper">
+		<div class="component-wrapper-carousel" id="carousel-id" v-scroll='handleScroll' v-if="width() > 700">
+			<div class="ia-container">
 				<figure>
-					<img src="./../../assets/images/viking.png" alt="viking-shield"/>
-					<input type="radio" name="radio-set"/>
-					<figcaption><span><h3>Medieval weapons</h3>I love History. So when I can, I learn how to make various weaponry, like viking shields for Historical Reenactors.</span></figcaption>
+					<img src="./../../assets/images/photography.png" alt="photography"/>
+					<input type="radio" name="radio-set" checked="checked"/>
+					<figcaption><span><h3>Photography</h3>Photography is a great way to let your creativity run wild! Discover some of my photos on <a href="https://www.flickr.com/photos/96139453@N06/" target="_blank">Flickr</a> </span></figcaption>
 					<figure>
-						<img src="./../../assets/images/retro2.png" alt="retro-gaming"/>
+						<img src="./../../assets/images/viking.png" alt="viking-shield"/>
 						<input type="radio" name="radio-set"/>
-						<figcaption><span><h3>Retro-Gaming</h3>I'm a 90's Snes boy... since Street Fighter 2, I've been an avid gamer and collector</span></figcaption>
+						<figcaption><span><h3>Medieval weapons</h3>I love History. So when I can, I learn how to make various weaponry, like viking shields for Historical Reenactors.</span></figcaption>
 						<figure>
-							<img src="./../../assets/images/voyage.png" alt="voyage"/>
+							<img src="./../../assets/images/retro2.png" alt="retro-gaming"/>
 							<input type="radio" name="radio-set"/>
-							<figcaption><span><h3>Adventure!</h3>What's better than seeing the World!? China, Iceland and the Scottish Highlands? Experiencing other Cultures!</span></figcaption>
+							<figcaption><span><h3>Retro-Gaming</h3>I'm a 90's Snes boy... since Street Fighter 2, I've been an avid gamer and collector</span></figcaption>
+							<figure>
+								<img src="./../../assets/images/voyage.png" alt="voyage"/>
+								<input type="radio" name="radio-set"/>
+								<figcaption><span><h3>Adventure!</h3>What's better than seeing the World!? China, Iceland and the Scottish Highlands? Experiencing other Cultures!</span></figcaption>
+							</figure>
 						</figure>
 					</figure>
 				</figure>
-			</figure>
+			</div>
+		</div>
+		<div class="carousel-wrapper" v-else>
+			<carousel :perPage="1" :autoplay="false" :loop="true" :autoplayTimeout="5000" :autoplayHoverPause="true" :paginationEnabled="false">
+				<slide>
+					<img src="./../../assets/images/photography.png" alt="" class="image-slider">
+					<div class="slider-span">
+						<h3>Photography</h3>Photography is a great way to let your creativity run wild! Discover some of my photos on <a href="https://www.flickr.com/photos/96139453@N06/" target="_blank">Flickr</a>
+					</div>
+				</slide>
+				<slide>
+					<img src="./../../assets/images/viking.png" alt="" class="image-slider">
+					<div class="slider-span">
+						<h3>Medieval weapons</h3>I love History. So when I can, I learn how to make various weaponry, like viking shields for Historical Reenactors.
+					</div>
+				</slide>
+				<slide>
+					<img src="./../../assets/images/retro2.png" alt="" class="image-slider">
+					<div class="slider-span">
+						<h3>Retro-Gaming</h3>I'm a 90's Snes boy... since Street Fighter 2, I've been an avid gamer and collector
+					</div>
+				</slide>
+				<slide>
+					<img src="./../../assets/images/voyage.png" alt="" class="image-slider">
+					<div class="slider-span">
+						<h3>Adventure!</h3>What's better than seeing the World!? China, Iceland and the Scottish Highlands? Experiencing other Cultures!
+					</div>
+				</slide>
+			</carousel>
 		</div>
 	</div>
 </template>
@@ -28,11 +58,15 @@
 export default {
   data () {
     return {
+			desktop: true,
 			isVisible: false,
       msg: 'Welcome to Your Vue.js App',
     }
   },
   methods: {
+		width() {
+			return window.innerWidth
+		},
     handleScroll: function (evt) {
       var div = document.getElementById('carousel-id')
       if (window.scrollY > 1380 && this.isVisible === false && window.innerWidth > 499) {
@@ -48,7 +82,7 @@ export default {
     }
 	},
   created () {
-    document.addEventListener('scroll', this.handleScroll)
+		document.addEventListener('scroll', this.handleScroll)
   },
   destroyed () {
     document.removeEventListener('scroll', this.handleScroll)
@@ -74,6 +108,31 @@ export default {
 		}
 	}
 }
+ .image-slider {
+	width: 100%;
+	height: 345px;
+ }
+ 	.slider-span {
+		position: relative;
+		text-decoration: none;
+		padding: 10px;
+		overflow: hidden;
+		text-align: center;
+		line-height: 20px;
+		font-size: 18px;
+		opacity: 1;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		font-weight: 700;
+		color: #fff;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+		a {
+			color: #13c3f8;
+			text-decoration: none;
+		}
+	}
+
+
 
 
 .ia-container figure {
