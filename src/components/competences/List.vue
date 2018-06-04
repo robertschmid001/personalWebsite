@@ -223,6 +223,9 @@ export default {
     justify-content: center;
     padding-top: 150px;
     padding-bottom: 150px;
+      h2 {
+        font-size: 20px;
+      }
     .competences-wrapper {
       margin: auto;
       justify-content: center;
