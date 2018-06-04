@@ -1,6 +1,6 @@
 <template>
 <div class="component-wrapper-list" id="wrapper-list">
-  <h2>RING MY SKILLS!</h2>
+  <h2>PING MY SKILLS!</h2>
   <div class="competences-wrapper">
       <div class="items-wrapper">
         <div v-for="item in skills" class="item-wrapper">
