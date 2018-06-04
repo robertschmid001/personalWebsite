@@ -24,4 +24,9 @@
     background-image: url('./../../assets/images/leftsmallcrop.png');
   }
 }
+@media (max-width: 600px) {
+  .portrait {
+    background-image: url('./../../assets/images/leftsmallcrop2.png');
+  }
+}
 </style>
