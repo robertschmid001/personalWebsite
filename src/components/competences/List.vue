@@ -1,5 +1,6 @@
 <template>
 <div class="component-wrapper-list" id="wrapper-list">
+  <h2>RING MY SKILLS!</h2>
   <div class="competences-wrapper">
       <div class="items-wrapper">
         <div v-for="(item, index) in skills" class="item-wrapper">
@@ -101,6 +102,14 @@ export default {
   display: flex;
   width: 100%;
   justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-style: oblique;
+  }
   .competences-wrapper {
     margin: auto;
     justify-content: center;
@@ -140,9 +149,9 @@ export default {
         padding: 0;
         justify-content: center;
         .item-wrapper {
-          max-width:180px;
+          max-width:200px;
           .icon {
-            max-width: 180px;
+            max-width: 200px;
             display:flex;
           }
         }
@@ -225,7 +234,7 @@ export default {
         justify-content: center;
         .item-wrapper {
           max-width:90px;
-          margin: 10px;
+          margin: 15px;
           .icon {
             max-width: 90px;
             display:flex;

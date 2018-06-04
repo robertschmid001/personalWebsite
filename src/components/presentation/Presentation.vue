@@ -198,18 +198,19 @@ h2 {
 }
 @media (max-width: 1100px) {
   .main  {
-    height: 1085px;
+    height: 1510px;
     justify-content: center;
     flex-direction: column;
     display: flex;
     .wrapper1 {
+      height: 100%;
       width: 100%;
       flex-direction: column;
       display: flex;
       .first {
         margin: 0;
         width: 100%;
-        height: 15%;
+        height: 150px;
         & .title-presentation-wrapper {
           height: 100%;
           text-align: center;
@@ -229,7 +230,7 @@ h2 {
       }
       .second {
         margin: 0;
-        height: 70%;
+        height: 760px;
         width: 100%;
         background-color: white;
         visibility: hidden;
@@ -253,7 +254,7 @@ h2 {
       .third {
         background-color: rgb(212, 240, 252);
         visibility: hidden;
-        height: 15%;
+        height: 600px;
         margin: 0;
         width: 100%;
         z-index: 4;
@@ -261,6 +262,8 @@ h2 {
           padding: 0;
           height: 100%;
           & .h3-content3 {
+            top: 80%;
+            padding-left: 20px;
             font-size: 40px;
             font-style: oblique;
             line-height: 40px;

@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div class="carousel-wrapper" v-else>
-			<carousel :perPage="1" :autoplay="false" :loop="true" :autoplayTimeout="5000" :autoplayHoverPause="true" :paginationEnabled="false">
+			<carousel :perPage="1" :autoplay="false" :loop="true" :autoplayTimeout="5000" :autoplayHoverPause="true" :paginationEnabled="true">
 				<slide>
 					<img src="./../../assets/images/photography.png" alt="" class="image-slider">
 					<div class="slider-span">

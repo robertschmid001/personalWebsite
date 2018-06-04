@@ -3,7 +3,7 @@
     <div class="projects-wrapper">
 			<div class="content1">
       	<div class="image-wrapper">
-					<h2>AND MY <span class="h2-space" >PROJECTS?</span></h2>
+					<h2>AND MY <br> <span class="h2-space" >PROJECTS?</span></h2>
 				</div>
 				<div class="batnav-wrapper" id="batnav" v-scroll="handleScroll">
 					<img src="./../../assets/images/batNav.png" alt="">
@@ -185,9 +185,12 @@ $size: 170px; // (Fully responsive)
 				h2 {
 					color: white;
 					margin: 0;
-					margin-top: 17%;
+					margin-top: 15%;
 					font-size: 40px;
 					font-style: oblique;
+					.h2-space {
+						padding-left: 40px;
+					}
 				}
 			}
 			& .batnav-wrapper {
@@ -469,16 +472,17 @@ a:hover {
 				z-index: 4;
 				& .image-wrapper {
 					display: flex;
-					height: 150px;
+					height: 800px;
 					background: $color-black;
 					text-align: left;
 					h2 {
+						margin-top: 0;
+						height: 40px;
+						position: relative;
 						width: 100%;
-						color: white;
 						padding-left: 20px;
 						font-size: 40px;
-						font-style: oblique;
-						margin-top: 5%;
+						top: 80%;
 					}
 				}
 				& .batnav-wrapper {
@@ -491,7 +495,7 @@ a:hover {
 					}
 				}
 				.coworking-wrapper {
-					margin-top: 20px;
+					margin-top: 300px;
 					background-color: white;
 					visibility: hidden;
 					& img {
@@ -504,6 +508,28 @@ a:hover {
 				z-index: 2;
 				& .cat-wrapper {
 					height: 300px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: $color-black;
+					overflow: hidden;
+					& .cat {
+						position: relative;
+						height: 170px;
+						width: 170px * 1.13;
+					}
+				}
+				.bloc-color2 {
+					position: relative;
+					width: 100%;
+					background: $color-black;
+					overflow: hidden;
+					transform: rotate(45deg);
+				}
+			}
+			& .content2 {
+				& .cat-wrapper {
+					height: 900px;
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -539,7 +565,7 @@ a:hover {
 					}
 				}
 				.aquatique-wrapper {
-					margin-top: 20px;
+					margin-top: 300px;
 					background-color: white;
 					visibility: hidden;
 					& img {
@@ -585,9 +611,6 @@ a:hover {
 						padding-left: 20px;
 						font-size: 40px;
 						top: 73%;
-						.h2-space {
-							padding-left: 40px;
-						}
 					}
 				}
 				.coworking-wrapper {
