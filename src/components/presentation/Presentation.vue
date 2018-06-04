@@ -98,7 +98,7 @@ export default {
     .first {
       margin-top: 130px;
       width: 30%;
-      height: 563.42px;
+      height: 594.42px;
       .title-presentation-wrapper {
         height: 100%;
         position: relative;
