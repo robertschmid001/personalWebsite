@@ -32,7 +32,7 @@ export default {
     //     iconsWrapper.style.justifyContent = 'center'
     //   }
     // }
-  },
+  }
   // created () {
   //   document.addEventListener('scroll', this.handleScroll)
   // },

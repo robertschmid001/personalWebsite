@@ -3,7 +3,7 @@
   <h2>RING MY SKILLS!</h2>
   <div class="competences-wrapper">
       <div class="items-wrapper">
-        <div v-for="(item, index) in skills" class="item-wrapper">
+        <div v-for="item in skills" class="item-wrapper">
           <img :src="item.imageUrl" :style="grayscale(item)" v-on:click="itemOnOff(item)" class="icon" :alt="item.title">
         </div>
       </div>

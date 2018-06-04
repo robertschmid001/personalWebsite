@@ -31,66 +31,63 @@ export default {
       firstName: null,
       lastName: null,
       email: null,
-      message: null,
+      message: null
     }
   },
   mounted () {
- var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+    var TxtType = function(el, toRotate, period) {
+      this.toRotate = toRotate
+      this.el = el
+      this.loopNum = 0
+      this.period = parseInt(period, 10) || 2000
+      this.txt = ''
+      this.tick()
+      this.isDeleting = false
+    }
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+    TxtType.prototype.tick = function () {
+      var i = this.loopNum % this.toRotate.length
+      var fullTxt = this.toRotate[i]
 
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-        if (this.isDeleting) {
-          delta /= 2;
-        }
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1)
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1)
+      }
+      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>'
+      var that = this
+      var delta = 200 - Math.random() * 100
+      if (this.isDeleting) {
+        delta /= 2
+      }
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period
+        this.isDeleting = true
+      } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false
+        this.loopNum++
+        delta = 500
+      }
+      setTimeout(function () {
+        that.tick()
+      }, delta)
+    }
 
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
+    window.onload = function () {
+      var elements = document.getElementsByClassName('typewrite')
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type')
+        var period = elements[i].getAttribute('data-period')
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period)
         }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
-
-  },
-  methods: {
+      }
+      // INJECT CSS
+      var css = document.createElement('style')
+      css.type = 'text/css'
+      css.innerHTML = '.typewrite > .wrap { border-right: 0.08em solid #fff}'
+      document.body.appendChild(css)
+    }
   }
 }
 
@@ -188,265 +185,264 @@ input {
   }
 }
 @media (max-width: 1030px) {
-.footer-wrapper {
-  height: 100%;
-  .h1-bloc {
-    background-color: rgb(108, 188, 253);
-    flex-direction: row;
-    display: flex;
-    .mail-icon {
-      width: 10%;
-      padding: 0 10px 0 10px;
-    }
-    h1 {
-      margin: 0;
-      padding: 40px;
-      padding-left: 50px;
-      color: white;
-      font-size: 30px;
-      width: 90%;
-      .typewrite {
-        color: white;
-        text-decoration:none;
-        .wrap {
-          border-right: .05em solid;
-          animation: caret 1s steps(1) infinite;
-        }
-      }
-    }
-  }
-  .form-wrapper {
-    padding: 20px;
-    line-height: 50px;
-    overflow: none;
-    background-color: white;
-    h2 {
-      font-size: 25px;
-      margin: 0;
-    }
-    span {
-      font-size: 25px;
-      font-style: italic;
-      font-weight: 600;
-    }
-    .name-inputs {
-      width: 200px;
-      font-size: 25px;
-      height: 40px;
-    }
-    .email-input {
-      width: 40%;
-      font-size: 25px;
-      height: 40px;
-    }
-    .text-area-wrapper {
-      flex-direction: column;
+  .footer-wrapper {
+    height: 100%;
+    .h1-bloc {
+      background-color: rgb(108, 188, 253);
+      flex-direction: row;
       display: flex;
-      textarea {
-        font-size: 20px;
-        font-style: italic;
-        color: rgb(108, 188, 253);
-        overflow-y: hidden;
+      .mail-icon {
+        width: 10%;
+        padding: 0 10px 0 10px;
+      }
+      h1 {
         margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 200px;
-      }
-      .send-wrapper {
-        width: 100%;
-        .send-button {
-          border-style: none;
-          color: white;
-          background-color: rgb(108, 188, 253);
-          padding: 10px;
-          font-size: 30px;
-          height: 100%;
-          width: 100%;
-        }
-      }
-    }
-  }
-  }
-  input {
-  font-style: italic;
-  color: rgb(108, 188, 253);
-  border-style: none;
-  border-bottom: 1px solid black;
-  }
-}
-@media (max-width: 714px) {
-.footer-wrapper {
-  height: 100%;
-  .h1-bloc {
-    background-color: rgb(108, 188, 253);
-    flex-direction: row;
-    display: flex;
-    .mail-icon {
-      width: 10%;
-      padding: 0 10px 0 10px;
-    }
-    h1 {
-      margin: 0;
-      padding: 40px;
-      padding-left: 50px;
-      color: white;
-      font-size: 30px;
-      width: 90%;
-      .typewrite {
+        padding: 40px;
+        padding-left: 50px;
         color: white;
-        text-decoration:none;
-        .wrap {
-          border-right: .05em solid;
-          animation: caret 1s steps(1) infinite;
-        }
-      }
-    }
-  }
-  .form-wrapper {
-    padding: 20px;
-    line-height: 30px;
-    overflow: none;
-    background-color: white;
-    h2 {
-      font-size: 20px;
-      margin: 0;
-    }
-    span {
-      font-size: 20px;
-      font-style: italic;
-      font-weight: 600;
-    }
-    .name-inputs {
-      width: 100%;
-      font-size: 20px;
-      height: 30px;
-    }
-    .email-input {
-      width: 100%;
-      font-size: 20px;
-      height: 30px;
-    }
-    .text-area-wrapper {
-      flex-direction: column;
-      display: flex;
-      textarea {
-        font-size: 20px;
-        font-style: italic;
-        color: rgb(108, 188, 253);
-        overflow-y: hidden;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 200px;
-      }
-      .send-wrapper {
-        width: 100%;
-        .send-button {
-          border-style: none;
+        font-size: 30px;
+        width: 90%;
+        .typewrite {
           color: white;
-          background-color: rgb(108, 188, 253);
-          padding: 10px;
-          font-size: 30px;
-          height: 100%;
-          width: 100%;
+          text-decoration:none;
+          .wrap {
+            border-right: .05em solid;
+            animation: caret 1s steps(1) infinite;
+          }
         }
       }
     }
-  }
-  }
-  input {
-  font-style: italic;
-  color: rgb(108, 188, 253);
-  border-style: none;
-  border-bottom: 1px solid black;
-  }
-}
-@media (max-width: 714px) {
-.footer-wrapper {
-  height: 100%;
-  .h1-bloc {
-    background-color: rgb(108, 188, 253);
-    flex-direction: row;
-    display: flex;
-    .mail-icon {
-      width: 10%;
-      padding: 0 10px 0 10px;
-    }
-    h1 {
-      margin: 0;
+    .form-wrapper {
       padding: 20px;
-      padding-left: 20px;
-      color: white;
-      font-size: 20px;
-      width: 90%;
-      .typewrite {
-        color: white;
-        text-decoration:none;
-        .wrap {
-          border-right: .05em solid;
-          animation: caret 1s steps(1) infinite;
-        }
-      }
-    }
-  }
-  .form-wrapper {
-    padding: 20px;
-    line-height: 30px;
-    overflow: none;
-    background-color: white;
-    h2 {
-      font-size: 20px;
-      margin: 0;
-    }
-    span {
-      font-size: 20px;
-      font-style: italic;
-      font-weight: 600;
-    }
-    .name-inputs {
-      width: 100%;
-      font-size: 20px;
-      height: 30px;
-    }
-    .email-input {
-      width: 100%;
-      font-size: 20px;
-      height: 30px;
-    }
-    .text-area-wrapper {
-      flex-direction: column;
-      display: flex;
-      textarea {
-        font-size: 20px;
-        font-style: italic;
-        color: rgb(108, 188, 253);
-        overflow-y: hidden;
+      line-height: 50px;
+      overflow: none;
+      background-color: white;
+      h2 {
+        font-size: 25px;
         margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 200px;
       }
-      .send-wrapper {
-        width: 100%;
-        .send-button {
-          border-style: none;
-          color: white;
-          background-color: rgb(108, 188, 253);
-          padding: 10px;
-          font-size: 30px;
-          height: 100%;
+      span {
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 600;
+      }
+      .name-inputs {
+        width: 200px;
+        font-size: 25px;
+        height: 40px;
+      }
+      .email-input {
+        width: 40%;
+        font-size: 25px;
+        height: 40px;
+      }
+      .text-area-wrapper {
+        flex-direction: column;
+        display: flex;
+        textarea {
+          font-size: 20px;
+          font-style: italic;
+          color: rgb(108, 188, 253);
+          overflow-y: hidden;
+          margin: 0;
+          padding: 0;
           width: 100%;
+          height: 200px;
+        }
+        .send-wrapper {
+          width: 100%;
+          .send-button {
+            border-style: none;
+            color: white;
+            background-color: rgb(108, 188, 253);
+            padding: 10px;
+            font-size: 30px;
+            height: 100%;
+            width: 100%;
+          }
         }
       }
     }
-  }
   }
   input {
-  font-style: italic;
-  color: rgb(108, 188, 253);
-  border-style: none;
-  border-bottom: 1px solid black;
+    font-style: italic;
+    color: rgb(108, 188, 253);
+    border-style: none;
+    border-bottom: 1px solid black;
+  }
+}
+@media (max-width: 714px) {
+  .footer-wrapper {
+    height: 100%;
+    .h1-bloc {
+      background-color: rgb(108, 188, 253);
+      flex-direction: row;
+      display: flex;
+      .mail-icon {
+        width: 10%;
+        padding: 0 10px 0 10px;
+      }
+      h1 {
+        margin: 0;
+        padding: 40px;
+        padding-left: 50px;
+        color: white;
+        font-size: 30px;
+        width: 90%;
+        .typewrite {
+          color: white;
+          text-decoration:none;
+          .wrap {
+            border-right: .05em solid;
+            animation: caret 1s steps(1) infinite;
+          }
+        }
+      }
+    }
+    .form-wrapper {
+      padding: 20px;
+      line-height: 30px;
+      overflow: none;
+      background-color: white;
+      h2 {
+        font-size: 20px;
+        margin: 0;
+      }
+      span {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 600;
+      }
+      .name-inputs {
+        width: 100%;
+        font-size: 20px;
+        height: 30px;
+      }
+      .email-input {
+        width: 100%;
+        font-size: 20px;
+        height: 30px;
+      }
+      .text-area-wrapper {
+        flex-direction: column;
+        display: flex;
+        textarea {
+          font-size: 20px;
+          font-style: italic;
+          color: rgb(108, 188, 253);
+          overflow-y: hidden;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 200px;
+        }
+        .send-wrapper {
+          width: 100%;
+          .send-button {
+            border-style: none;
+            color: white;
+            background-color: rgb(108, 188, 253);
+            padding: 10px;
+            font-size: 30px;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  input {
+    font-style: italic;
+    color: rgb(108, 188, 253);
+    border-style: none;
+    border-bottom: 1px solid black;
+  }
+}
+@media (max-width: 714px) {
+  .footer-wrapper {
+    height: 100%;
+    .h1-bloc {
+      background-color: rgb(108, 188, 253);
+      flex-direction: row;
+      display: flex;
+      .mail-icon {
+        width: 10%;
+        padding: 0 10px 0 10px;
+      }
+      h1 {
+        margin: 0;
+        padding: 20px;
+        padding-left: 20px;
+        color: white;
+        font-size: 20px;
+        width: 90%;
+        .typewrite {
+          color: white;
+          text-decoration:none;
+          .wrap {
+            border-right: .05em solid;
+            animation: caret 1s steps(1) infinite;
+          }
+        }
+      }
+    }
+    .form-wrapper {
+      padding: 20px;
+      line-height: 30px;
+      overflow: none;
+      background-color: white;
+      h2 {
+        font-size: 20px;
+        margin: 0;
+      }
+      span {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 600;
+      }
+      .name-inputs {
+        width: 100%;
+        font-size: 20px;
+        height: 30px;
+      }
+      .email-input {
+        width: 100%;
+        font-size: 20px;
+        height: 30px;
+      }
+      .text-area-wrapper {
+        flex-direction: column;
+        display: flex;
+        textarea {
+          font-size: 20px;
+          font-style: italic;
+          color: rgb(108, 188, 253);
+          overflow-y: hidden;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 200px;
+        }
+        .send-wrapper {
+          width: 100%;
+          .send-button {
+            border-style: none;
+            color: white;
+            background-color: rgb(108, 188, 253);
+            padding: 10px;
+            font-size: 30px;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  input {
+    font-style: italic;
+    color: rgb(108, 188, 253);
+    border-style: none;
+    border-bottom: 1px solid black;
   }
 }
 </style>
-

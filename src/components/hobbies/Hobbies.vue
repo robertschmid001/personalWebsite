@@ -1,6 +1,6 @@
 <template>
-<div class="component-wrapper">
-		<div class="component-wrapper-carousel" id="carousel-id" v-scroll='handleScroll' v-if="width() > 700">
+	<div class="component-wrapper">
+		<div class="component-wrapper-carousel" id="carousel-id" v-scroll='handleScroll' v-if="width() > 600">
 			<div class="ia-container">
 				<figure>
 					<img src="./../../assets/images/photography.png" alt="photography"/>
@@ -56,37 +56,34 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
+	data () {
+		return {
 			desktop: true,
 			isVisible: false,
-      msg: 'Welcome to Your Vue.js App',
-    }
-  },
-  methods: {
+			msg: 'Welcome to Your Vue.js App',
+		}
+	},
+	methods: {
 		width() {
 			return window.innerWidth
 		},
-    handleScroll: function (evt) {
-      var div = document.getElementById('carousel-id')
-      if (window.scrollY > 1380 && this.isVisible === false && window.innerWidth > 499) {
+		handleScroll: function (evt) {
+			var div = document.getElementById('carousel-id')
+			if (window.scrollY > 1380 && this.isVisible === false && window.innerWidth > 600) {
 				this.isVisible = true
-        div.style.visibility = 'visible'
-        div.animate([{transform: 'translateX(-100%)', opacity: 0}, {transform: 'translateX(0)', opacity: 1}],
+				div.style.visibility = 'visible'
+				div.animate([{transform: 'translateX(-100%)', opacity: 0}, {transform: 'translateX(0)', opacity: 1}],
 				{ duration:1000, iterations: 1})
 				document.removeEventListener('scroll', this.handleScroll)
-      }
-			if (window.innerWidth < 500) {
-        div.style.visibility = 'visible'
-      }
-    }
+			}
+		}
 	},
-  created () {
+	created () {
 		document.addEventListener('scroll', this.handleScroll)
-  },
-  destroyed () {
-    document.removeEventListener('scroll', this.handleScroll)
-  }
+	},
+	destroyed () {
+		document.removeEventListener('scroll', this.handleScroll)
+	}
 }
 </script>
 <style lang="scss" scoped>
@@ -108,55 +105,51 @@ export default {
 		}
 	}
 }
- .image-slider {
+.image-slider {
 	width: 100%;
 	height: 345px;
- }
- 	.slider-span {
-		position: relative;
+}
+.slider-span {
+	position: relative;
+	text-decoration: none;
+	padding: 10px;
+	overflow: hidden;
+	text-align: center;
+	line-height: 20px;
+	font-size: 18px;
+	opacity: 1;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	a {
+		color: #13c3f8;
 		text-decoration: none;
-		padding: 10px;
-		overflow: hidden;
-		text-align: center;
-		line-height: 20px;
-		font-size: 18px;
-		opacity: 1;
-		text-transform: uppercase;
-		letter-spacing: 4px;
-		font-weight: 700;
-		color: #fff;
-		text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-		a {
-			color: #13c3f8;
-			text-decoration: none;
-		}
 	}
-
-
-
-
+}
 .ia-container figure {
-  position: absolute;
+	position: absolute;
 	top: 0;
 	left: 250px; /* width of visible piece */
 	width: 500px; /* width of the actual image */
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.6);
+	box-shadow: 0 0 0 1px rgba(255,255,255,0.6);
 	-webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    margin: 0;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	margin: 0;
 }
 
 .ia-container > figure {
-  position: relative;
+	position: relative;
 	left: 0 !important;
 }
 
 .ia-container img {
 	display: block;
-  height: 100%;
+	height: 100%;
 	width: 100%;
 }
 
@@ -184,13 +177,12 @@ export default {
 }
 .ia-container input:checked ~ figure {
 	-webkit-transition: all 0.7s ease-in-out;
-    -moz-transition: all 0.7s ease-in-out;
-    -o-transition: all 0.7s ease-in-out;
-    -ms-transition: all 0.7s ease-in-out;
-    transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	-ms-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
 	left: 100%;
 }
-
 .ia-container figcaption {
 	width: 100%;
 	height: 100%;
@@ -198,12 +190,11 @@ export default {
 	position: absolute;
 	top: 0px;
 	-webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    -ms-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
-
 .ia-container figcaption span {
 	position: absolute;
 	top: 40%;
@@ -216,8 +207,8 @@ export default {
 	line-height: 20px;
 	font-size: 18px;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
+	filter: alpha(opacity=0);
+	opacity: 0;
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	font-weight: 700;
@@ -233,12 +224,12 @@ export default {
 
 .ia-container input:checked + figcaption span {
 	-webkit-transition: all 0.4s ease-in-out 0.5s;
-    -moz-transition: all 0.4s ease-in-out 0.5s;
-    -o-transition: all 0.4s ease-in-out 0.5s;
-    -ms-transition: all 0.4s ease-in-out 0.5s;
-    transition: all 0.4s ease-in-out 0.5s;
+	-moz-transition: all 0.4s ease-in-out 0.5s;
+	-o-transition: all 0.4s ease-in-out 0.5s;
+	-ms-transition: all 0.4s ease-in-out 0.5s;
+	transition: all 0.4s ease-in-out 0.5s;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
-    filter: alpha(opacity=99);
+	filter: alpha(opacity=99);
 	opacity: 1;
 	top: 30%;
 }
@@ -256,11 +247,11 @@ export default {
 }
 
 .ia-container input:checked ~ figure input{
-    z-index: 1;
+	z-index: 1;
 }
 
 @media screen and (max-width: 1185px) {
-  .ia-container {
+	.ia-container {
 		background-color:rgb(108, 188, 253);
 		width: 100%;
 		height: 400px;
@@ -280,7 +271,7 @@ export default {
 	}
 }
 @media screen and (max-width: 1105px) {
-    .ia-container {
+	.ia-container {
 		width: 100%;
 		height: 400px;
 	}
@@ -298,107 +289,107 @@ export default {
 		font-size: 16px;
 	}
 }
-	@media screen and (max-width: 970px) {
-    .ia-container {
-		width: 100%;
-		height: 400px;
-		}
-		.ia-container figure {
-			left: 38%;
-			width: 400px;
-		}
-		.ia-container input {
-			width: 30%;
-		}
-		.ia-container input:checked ~ figure {
-			left: 100%;
-		}
-		.ia-container figcaption span {
-			font-size: 16px;
-		}
+@media screen and (max-width: 970px) {
+	.ia-container {
+	width: 100%;
+	height: 400px;
 	}
-		@media screen and (max-width: 820px) {
-    .ia-container {
-		width: 100%;
-		height: 400px;
-		}
-		.ia-container figure {
-			left: 25%;
-			width: 400px;
-		}
-		.ia-container input {
-			width: 30%;
-		}
-		.ia-container figcaption span {
-			font-size: 16px;
-		}
+	.ia-container figure {
+		left: 38%;
+		width: 400px;
 	}
-			@media screen and (max-width: 740px) {
-    .ia-container {
-		width: 100%;
-		height: 400px;
-		}
-		.ia-container figure {
-			left: 27%;
-			width: 400px;
-		}
-		.ia-container input {
-			width: 30%;
-		}
-		.ia-container figcaption span {
-			font-size: 16px;
-		}
+	.ia-container input {
+		width: 30%;
 	}
-	@media screen and (max-width: 670px) {
-    .ia-container {
-		width: 100%;
-		height: 400px;
-		}
-		.ia-container figure {
-			left: 15%;
-			width: 400px;
-		}
-		.ia-container input {
-			width: 30%;
-		}
-		.ia-container figcaption span {
-			font-size: 16px;
-		}
+	.ia-container input:checked ~ figure {
+		left: 100%;
 	}
-	@media screen and (max-width: 546px) {
-    .ia-container {
-		width: 100%;
-		height: 450px;
+	.ia-container figcaption span {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 820px) {
+	.ia-container {
+	width: 100%;
+	height: 400px;
+	}
+	.ia-container figure {
+		left: 25%;
+		width: 400px;
+	}
+	.ia-container input {
+		width: 30%;
+	}
+	.ia-container figcaption span {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 740px) {
+	.ia-container {
+	width: 100%;
+	height: 400px;
+	}
+	.ia-container figure {
+		left: 27%;
+		width: 400px;
+	}
+	.ia-container input {
+		width: 30%;
+	}
+	.ia-container figcaption span {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 670px) {
+	.ia-container {
+	width: 100%;
+	height: 400px;
+	}
+	.ia-container figure {
+		left: 15%;
+		width: 400px;
+	}
+	.ia-container input {
+		width: 30%;
+	}
+	.ia-container figcaption span {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 546px) {
+	.ia-container {
+	width: 100%;
+	height: 450px;
 
-		}
-		.ia-container figure {
-			left: 30%;
-			width: 250px;
-			height: 450px;
-		}
-		.ia-container input {
-			width: 30%;
-		}
-		.ia-container figcaption span {
-			font-size: 14px;
-		}
 	}
-	@media screen and (max-width: 465px) {
-    .ia-container {
-		width: 100%;
+	.ia-container figure {
+		left: 30%;
+		width: 250px;
 		height: 450px;
-		}
-		.ia-container input {
-			width: 5%;
-		}
-		.ia-container figure {
-			left: 10%;
-			width: 250px;
-			height: 450px;
-		}
-		.ia-container figcaption span {
-			font-size: 14px;
-		}
 	}
+	.ia-container input {
+		width: 30%;
+	}
+	.ia-container figcaption span {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 465px) {
+	.ia-container {
+	width: 100%;
+	height: 450px;
+	}
+	.ia-container input {
+		width: 5%;
+	}
+	.ia-container figure {
+		left: 10%;
+		width: 250px;
+		height: 450px;
+	}
+	.ia-container figcaption span {
+		font-size: 14px;
+	}
+}
 
 </style>

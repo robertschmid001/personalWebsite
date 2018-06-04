@@ -39,18 +39,18 @@
 </template>
 <script>
 export default {
-isVisible: false,
+  isVisible: false,
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      animateContent: false,
+      animateContent: false
     }
   },
   methods: {
     showVisible () {
       this.isVisible = !this.isVisible
       var item = document.getElementById('second-content')
-      if(this.isVisible === true) {
+      if (this.isVisible === true) {
         return item.style.visibility = 'hidden'
       }
       return item.style.visibility = 'visible'
@@ -58,16 +58,16 @@ isVisible: false,
     handleScroll: function (evt) {
       var div = document.getElementById('second-content')
       var div2 = document.getElementById('third-content')
-      if (window.scrollY > 600 && this.animateContent == false && window.innerWidth > 499)  {
+      if (window.scrollY > 600 && this.animateContent === false && window.innerWidth > 499) {
         this.animateContent = true
         div.style.visibility = 'visible'
-        div.animate([{transform: 'translateY(-100%)', opacity: 0}, {transform: 'translateY(0)', opacity: 1}],
-        { duration: 600, iterations: 1})
+        div.animate([{transform: 'translateY(-100%)', opacity: 0}, { transform: 'translateY(0)', opacity: 1 }],
+          { duration: 600, iterations: 1 })
       }
-      if (window.scrollY > 900 && this.animateContent==true && window.innerWidth > 499) {
+      if (window.scrollY > 900 && this.animateContent === true && window.innerWidth > 499) {
         div2.style.visibility = 'visible'
         div2.animate([{ transform: 'translateX(-100%)', opacity: 0 },
-        {transform: 'translateX(0)', opacity: 1}], {duration: 800, iterations: 1})
+        { transform: 'translateX(0)', opacity: 1 }], { duration: 800, iterations: 1 })
         document.removeEventListener('scroll', this.handleScroll)
       }
       if (window.innerWidth < 500) {
@@ -86,7 +86,7 @@ isVisible: false,
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.main  {
+.main {
   height: 1085px;
   justify-content: center;
   display: flex;
@@ -197,7 +197,7 @@ h2 {
   padding-left: 83px;
 }
 @media (max-width: 1100px) {
-  .main  {
+  .main {
     height: 1510px;
     justify-content: center;
     flex-direction: column;
@@ -302,7 +302,7 @@ h2 {
 .padding-h3-title {
   padding: 20px;
 }
-  .main  {
+  .main {
     height: 1510px;
     justify-content: center;
     flex-direction: column;
@@ -386,5 +386,3 @@ h2 {
   }
 }
 </style>
-
-

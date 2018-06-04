@@ -1,9 +1,9 @@
 <template>
-  <div class="projects-component" id="projects-component-id">
-    <div class="projects-wrapper">
+	<div class="projects-component" id="projects-component-id">
+		<div class="projects-wrapper">
 			<div class="content1">
-      	<div class="image-wrapper">
-					<h2>AND MY <br> <span class="h2-space" >PROJECTS?</span></h2>
+				<div class="image-wrapper">
+					<h2>AND MY <br><span class="h2-space">PROJECTS?</span></h2>
 				</div>
 				<div class="batnav-wrapper" id="batnav" v-scroll="handleScroll">
 					<img src="./../../assets/images/batNav.png" alt="">
@@ -21,7 +21,7 @@
 				<div class="coworking-wrapper" id="coworking" v-scroll="handleScroll">
 					<img src="./../../assets/images/coworking1.png" alt="">
 					<div class="text-wrapper">
-						<h3>First Project/Website: Co-Working </h3>
+						<h3>First Project/Website: Co-Working</h3>
 						<span class="project-text">
 							<h4>Objective: Create a simple one page website without using a frame-work.</h4><br>
 							&nbsp; This was our very first school project, for a real client. We had to create a small one-page for a Co-working open space.
@@ -30,7 +30,7 @@
 						</span>
 					</div>
 					<div class="carousel-wrapper">
-					<carousel  :perPage="1" :autoplay="true" :loop="true" :autoplayTimeout="5000" :autoplayHoverPause="true" :paginationEnabled="false">
+					<carousel :perPage="1" :autoplay="true" :loop="true" :autoplayTimeout="5000" :autoplayHoverPause="true" :paginationEnabled="false">
 						<slide><img src="./../../assets/images/coworking2.png" alt=""></slide>
 						<slide><img src="./../../assets/images/coworking3.png" alt=""></slide>
 						<slide><img src="./../../assets/images/coworking4.png" alt=""></slide>
@@ -39,7 +39,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="content2">
 				<div class="cat-wrapper">
 					<div class="cat">
@@ -66,15 +65,15 @@
 						<h3>First Hackathon</h3>
 						<span class="project-text">
 							<h4>Objective: Use a Pokémon API using Angular2, then do whatever you want with the data.</h4><br>
-							&nbsp; In our group, we were all Dad's and we wondered what our children would want.. So what could have better than a Pokédex? <br>
+							&nbsp; In our group, we were all Dad's and we wondered what our children would want.. So what could have better than a Pokédex?<br>
 							I wanted to design an interface that would evolve as we implement new functionalities. Our goal was to be able to input a Pokémon's name and have his picture and characteristics pop-up on the screen have the Dr read it out.
 							<a href="https://github.com/robertschmid001/Pokedex" target="_blank">Check it out on Github!</a><br>
 						</span>
 					</div>
 				</div>
-			<div class="aquatique-wrapper" id="aquatique"  v-scroll="handleScroll">
+			<div class="aquatique-wrapper" id="aquatique" v-scroll="handleScroll">
 				<img src="./../../assets/images/parcAquatique.png" alt="">
- 				<div class="text-wrapper">
+				<div class="text-wrapper">
 					<h3>Website: Parc Aquatique</h3>
 					<span class="project-text">
 					<h4>Objective: Create a website with CMS using Angular 4</h4><br>
@@ -84,7 +83,7 @@
 					They can also generate articles (saved by using mongoDB) that appear as short articles on the front page that leads into their own /news page.
 						<a href="https://parcaquatiqueduperche.fr" target="_blank">Check the website out!</a>
 					</span>
-      	</div>
+				</div>
 				<div class="carousel-wrapper">
 					<carousel :perPage="1" :autoplay="true" :loop="true" :autoplayTimeout="5000" :autoplayHoverPause="true" :paginationEnabled="false">
 						<slide><img src="./../../assets/images/weather.png" alt=""></slide>
@@ -94,66 +93,66 @@
 					</carousel>
 				</div>
 			</div>
-    </div>
 		</div>
-  </div>
+		</div>
+	</div>
 </template>
 <script>
 
 export default {
-  data () {
-    return {
-      selectedComponent: null,
+	data () {
+		return {
+			selectedComponent: null,
 			animationNumber: 1
-    }
-  },
-  components: {
-  },
-  methods: {
+		}
+	},
+	components: {
+	},
+	methods: {
 		handleScroll: function (evt) {
-      var div = document.getElementById('batnav')
-      var div2 = document.getElementById('pokedex')
+			var div = document.getElementById('batnav')
+			var div2 = document.getElementById('pokedex')
 			var div3= document.getElementById('aquatique')
 			var div4= document.getElementById('coworking')
-      if (window.scrollY > 2025 && this.animationNumber === 1 && window.innerWidth > 499) {
+			if (window.scrollY > 2025 && this.animationNumber === 1 && window.innerWidth > 499) {
 				this.animationNumber += 1
-        div2.style.visibility = 'visible'
-        div2.animate([{transform: 'translateX(200%)', opacity: 0}, {transform: 'translateY(0)', opacity: 1}],
-        { duration: 800, iterations: 1})
-      }
-      if (window.scrollY > 2200 && this.animationNumber === 2 && window.innerWidth > 499) {
+				div2.style.visibility = 'visible'
+				div2.animate([{transform: 'translateX(200%)', opacity: 0}, {transform: 'translateY(0)', opacity: 1}],
+				{ duration: 800, iterations: 1})
+			}
+			if (window.scrollY > 2200 && this.animationNumber === 2 && window.innerWidth > 499) {
 				this.animationNumber += 1
-        div.style.visibility = 'visible'
-        div.animate([{ transform: 'translateX(-100%)', opacity: 0 },
-        {transform: 'translateX(0)', opacity: 1}], {duration: 600, iterations: 1})
-      }
+				div.style.visibility = 'visible'
+				div.animate([{ transform: 'translateX(-100%)', opacity: 0 },
+				{transform: 'translateX(0)', opacity: 1}], {duration: 600, iterations: 1})
+			}
 			if (window.scrollY > 2850 && this.animationNumber === 3 && window.innerWidth > 499) {
 				this.animationNumber += 1
-        div3.style.visibility = 'visible'
-        div3.animate([{transform: 'translateY(200%)', opacity: 0}, {transform: 'translateY(0)', opacity: 1}],
+				div3.style.visibility = 'visible'
+				div3.animate([{transform: 'translateY(200%)', opacity: 0}, {transform: 'translateY(0)', opacity: 1}],
 				{duration:1000, iterations: 1})
-      }
+			}
 			if (window.scrollY > 3000 && this.animationNumber === 4 && window.innerWidth > 499) {
 				this.animationNumber += 1
-        div4.style.visibility = 'visible'
-        div4.animate([{ transform: 'translateX(-100%)', opacity: 0 },
-        {transform: 'translateX(0)', opacity: 1}], {duration: 600, iterations: 1})
-        document.removeEventListener('scroll', this.handleScroll)
-      }
+				div4.style.visibility = 'visible'
+				div4.animate([{ transform: 'translateX(-100%)', opacity: 0 },
+				{transform: 'translateX(0)', opacity: 1}], {duration: 600, iterations: 1})
+				document.removeEventListener('scroll', this.handleScroll)
+			}
 			if (window.innerWidth < 500 ) {
 				div.style.visibility = 'visible'
 				div2.style.visibility = 'visible'
 				div3.style.visibility = 'visible'
-        div4.style.visibility = 'visible'
-      }
-    }
-  },
+				div4.style.visibility = 'visible'
+			}
+		}
+	},
 	created () {
-    document.addEventListener('scroll', this.handleScroll)
-  },
-  destroyed () {
-    document.removeEventListener('scroll', this.handleScroll)
-  }
+		document.addEventListener('scroll', this.handleScroll)
+	},
+	destroyed () {
+		document.removeEventListener('scroll', this.handleScroll)
+	}
 }
 </script>
 <style lang="scss" scoped>
@@ -163,11 +162,11 @@ $color-none: linear-gradient(#b721fc, #6f15ff);
 $size: 170px; // (Fully responsive)
 
 .projects-component {
-  width: 100%;
-  justify-content: center;
-  display: flex;
+	width: 100%;
+	justify-content: center;
+	display: flex;
 	flex-wrap: wrap;
-	 & .projects-wrapper {
+	& .projects-wrapper {
 		display: flex;
 		text-align: center;
 		flex-wrap: wrap;
@@ -323,33 +322,33 @@ $size: 170px; // (Fully responsive)
 	font-size: 18px;
 }
 .title {
-  font-size: 22px;
-  }
+	font-size: 22px;
+	}
 .projects {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 img {
-  align-items: center;
-  display: flex;
+	align-items: center;
+	display: flex;
 }
 .data-v-c06c963c {
-  border: none;
+	border: none;
 }
 .description-wrapper {
-  text-align: left;
+	text-align: left;
 }
 a {
-color: #13c3f8;
- text-decoration: none;
+	color: #13c3f8;
+	text-decoration: none;
 }
 a:hover {
-	 font-weight: 900;
- }
+	font-weight: 900;
+}
 @keyframes easyUp {
-  0%   { bottom: 0; }
-  50% { bottom: 12px; }
-  100% { bottom: 0px; }
+	0% { bottom: 0; }
+	50% { bottom: 12px; }
+	100% { bottom: 0px; }
 }
 
 //cat
@@ -665,11 +664,6 @@ a:hover {
 					}
 				}
 			}
-
-
-
-
-
 		}
 	}
 }

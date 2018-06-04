@@ -17,7 +17,7 @@ export default {
     }
   },
   components: {
-     'Mail': Mail
+    'Mail': Mail
   },
   methods: {
   }
