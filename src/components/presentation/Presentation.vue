@@ -23,7 +23,7 @@
 
       <div class="content-wrapper3"><h2 class="h3-title-background3 padding-h3-title">AND NOW...?</h2>
         <div class="text-wrapper">
-          <p>&nbsp;&nbsp;I've currently finished my internship and I'm now open for opportunities to grow as a Developper within a .</p>
+          <p>&nbsp;&nbsp;I've currently finished my internship and I'm now open for opportunities to grow as a Developer and work on loads of cool new projects.</p>
         </div>
       </div>
     </div>
