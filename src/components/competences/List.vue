@@ -75,7 +75,7 @@ export default {
   methods: {
     grayscale (item) {
       if (item.clicked === false) {
-        const grayscale = `${'filter'}:${'grayscale(100%)'}`
+        const grayscale = `${'filter'}:${'brightness(20%)'}`
         return grayscale
       } else {
         const grayscale = `${'filter'}:${'none'}`

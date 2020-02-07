@@ -151,11 +151,11 @@ export default {
       width: 40%;
       background-color: rgb(212, 240, 252);
       z-index: 1;
-      height: 276px;
-      margin-top: 789px;
+      height: 295px;
+      margin-top: 790px;
       visibility: hidden;
       & .content3-wrapper1 {
-        height: 216px;
+        height: 228px;
         & .h3-content3 {
           position: relative;
           font-size: 40px;

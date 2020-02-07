@@ -14,9 +14,10 @@
         <span>Hey Robert! I'm </span><input class="name-inputs" type='text' name='prenom' v-model="firstName" placeholder="first name"/>&nbsp;&nbsp;<input class="name-inputs" type='text' name='nom' v-model="lastName" placeholder="last name"/><br>
         <span>You can contact me at </span><input class="email-input" type='email' name='email' v-model="email" placeholder="email" /><br>
         <h2>Your message:</h2>
+        <input class="name-inputs" type='hidden' name='lname' v-model="test" placeholder=""/>
         <div class="text-area-wrapper">
           <textarea name="message" v-model="message" class="textarea"></textarea>
-          <div class="send-wrapper">
+          <div class="send-wrapper" v-if="!test">
             <input class="send-button" type='submit' value='Send'/>
           </div>
         </div>
@@ -31,7 +32,8 @@ export default {
       firstName: null,
       lastName: null,
       email: null,
-      message: null
+      message: null,
+      test:null,
     }
   },
   mounted () {

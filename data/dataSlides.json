@@ -1,0 +1,9 @@
+{
+    "slides": [
+        {"motsclefs":["strip-tease", "javascript", "youtube", "Titre-Strip-tease", "1"] ,"type": "Javascript", "title": "Titre Strip-tease", "image": "https://www.youtube.com/embed/g5MMM-RY-ag","text": "this is a semi long text that will probably cut at some point what the hell."},
+        {"motsclefs":["strip-tease", "javascript", "youtube", "Titre-Strip-tease", "2"] ,"type": "Javascript", "title": "Titre Strip-tease", "image": "https://www.youtube.com/embed/g5MMM-RY-ag","text": "this is a semi long text that will probably cut at some point what the hell."},
+        {"motsclefs":["strip-tease", "javascript", "youtube", "Titre-Strip-tease", "3"] ,"type": "Javascript", "title": "Titre Strip-tease", "image": "https://www.youtube.com/embed/g5MMM-RY-ag","text": "this is a semi long text that will probably cut at some point what the hell."},
+        {"motsclefs":["strip-tease", "javascript", "youtube", "Titre-Strip-tease", "4"] ,"type": "Javascript", "title": "Titre Strip-tease", "image": "https://www.youtube.com/embed/g5MMM-RY-ag","text": "this is a semi long text that will probably cut at some point what the hell."}, 
+        {"motsclefs":["strip-tease", "javascript", "youtube", "Titre-Strip-tease", "5"] ,"type": "VueJs", "title": "Titre Strip-tease", "image": "https://www.youtube.com/embed/g5MMM-RY-ag","text": "this is a semi long text that will probably cut at some point what the hell."}
+    ]
+}
