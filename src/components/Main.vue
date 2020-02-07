@@ -6,6 +6,7 @@
   <Hobbies/>
   <Projects/>
   <List/>
+  <!-- <Devhelp/> -->
   <Footer/>
 </div>
 </template>
@@ -17,10 +18,12 @@ import List from './competences/List.vue'
 import Projects from './projects/Projects.vue'
 import Hobbies from './hobbies/Hobbies.vue'
 import Presentation from './presentation/Presentation.vue'
+import Devhelp from './devhelp/DevHelp.vue'
 
 export default {
   name: 'Main',
   components: {
+    Devhelp,
     Portrait,
     Navbar,
     Footer,
@@ -38,4 +41,7 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+.main {
+  background: linear-gradient(#e66465, #6f15ff);
+}
 </style>

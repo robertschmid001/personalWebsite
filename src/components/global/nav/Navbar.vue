@@ -53,6 +53,7 @@ export default {
   width: 100%;
   opacity: 1;
   height: 300px;
+  padding: 0;
 }
 ul {
   justify-content: center;
