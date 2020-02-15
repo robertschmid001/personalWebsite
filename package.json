@@ -12,12 +12,13 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "postinstall": "npm run build"
+    "postinstall": "HOME=/ npm run build"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
     "bootstrap-icons": "^1.0.0-alpha2",
     "express": "^4.16.3",
+    "heroku": "^7.38.1",
     "jquery": "^1.9.1",
     "popper.js": "^1.16.0",
     "vue": "^2.5.2",
