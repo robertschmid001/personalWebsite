@@ -7,11 +7,7 @@
   <Projects/>
   <List/>
   <!-- <Devhelp/> -->
-<<<<<<< HEAD
   <!-- just a test -->
-=======
-  <!-- just a tes -->
->>>>>>> origin
   <Footer/>
 </div>
 </template>
