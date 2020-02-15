@@ -7,7 +7,7 @@
   <Projects/>
   <List/>
   <!-- <Devhelp/> -->
-  <!-- just a test for a commit -->
+  <!-- just a test -->
   <Footer/>
 </div>
 </template>
